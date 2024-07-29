@@ -1,0 +1,18 @@
+<%# form_withを非同期で実装 %>
+<%= form_with url: posts_path, method: :post, id: 'new-post-form' do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, id: 'title' %>
+  </div>
+
+  <div>
+    <%= f.label :content %>
+    <%= f.text_area :content, id: 'content' %>
+  </div>
+
+  <div>
+    <%= f.submit 'submit' %>
+  </div>
+
+  <div id="response-message"></div>
+<% end %>
