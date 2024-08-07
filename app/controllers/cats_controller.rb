@@ -30,6 +30,7 @@ class CatsController < ApplicationController
     rescue => e
       # 予期しないエラーが発生した場合
       flash.now[:alert] = "予期しないエラーが発生しました。管理者にお問い合わせください。"
+      # ターミナルに出力される。厳密には Rails のログファイル に書き込まれる。
       logger.error "Unexpected error: #{e.message}"
       render :new, status: :internal_server_error
     end
