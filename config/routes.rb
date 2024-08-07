@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-
   resources :posts, only: [:new, :create]
   resources :books, only: [:new]
+  resources :cats, only: [:new, :create]
 
   # namespace は、ルーティングをネームスペースでグループ化するための方法。
   # これにより、api ネームスペース内で定義されたルートは、URLに/apiがプレフィックスとして追加される。
